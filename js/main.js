@@ -14,20 +14,20 @@ let food = {
 }
 
 function drawBG() {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "darkgreen";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 function drawSnake() {
     for (i = 0; i < snake.length; i++) {
-        context.fillStyle = "green";
+        context.fillStyle = "lightgreen";
         context.fillRect(snake[i].x, snake[i].y, box, box)
     }
 }
 
 
 function drawfood() {
-    context.fillStyle = "red";
+    context.fillStyle = "darkred";
     context.fillRect(food.x, food.y, box, box);
 }
 
@@ -53,7 +53,7 @@ function iniciarJogo() {
     for(i = 1; i < snake.length; i++) {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
-            alert("Você perdeu :( ")
+            alert("Você perdeu : [ ")
         }
     }
  
